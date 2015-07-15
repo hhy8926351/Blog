@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Blog by hhy8926351</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Blog</h1>
+        <p>前端学习博客</p>
+
+        <p class="view"><a href="https://github.com/hhy8926351/Blog">View the Project on GitHub <small>hhy8926351/Blog</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/hhy8926351/Blog/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/hhy8926351/Blog/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/hhy8926351/Blog">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="blog" class="anchor" href="#blog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Blog</h1>
+
+<p>前端学习博客
+arguments 不能人为创建，只能在函数创建时候生成
+arguments对象包含了如下属性：
+callee —— 对当前函数的引用
+length —— 实参的个数
+arguments中的参数和函数的实际传递的参数是共享的
+关于arguments的代码测试如下：
+function testAru(a,b,c){</p>
+
+<pre><code>//函数定义的参数个数
+alert(testAru.length);
+
+//实际传递的参数个数
+alert(arguments.length);
+
+//引用函数自身 可以用于实现匿名递归函数
+alert(arguments.callee === testAru);
+
+//参数相互共享
+alert(a === arguments[0]);
+alert(a);
+
+a = 30;
+alert(arguments[0]);
+
+//然而对于没有传递的参数c,参数不不共享的
+c = 40;
+alert(arguments[2]);
+
+arguments[2] = 50;
+alert(c);
+
+//依次访问函数参数
+for(var i=0;i&lt;arguments.length;i++){
+    alert(arguments[i]);//a = 30 b =20
+}
+</code></pre>
+
+<p>}</p>
+
+<p>testAru(10,20);</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/hhy8926351">hhy8926351</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
